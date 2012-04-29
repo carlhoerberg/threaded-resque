@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To start multiple workers in one process, set the ```WORKERS``` environment variable and run ```rake threaded_resque:workers```.
+
+```
+$ WORKERS=critical:20,high:10 rake threaded_resque:workers
+```
+
+```WORKERS``` is a comma delimited list of elements, where each element has the following syntax: "[name of queue]:[number of threads consuming that queue]".
 
 ## Contributing
 
